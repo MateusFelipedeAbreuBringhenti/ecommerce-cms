@@ -1,10 +1,10 @@
 import { SidebarForm } from "@/components/layout/sidebar-form";
 import { useParams } from "react-router-dom";
-import { useCategory } from "../hooks/use-category";
+import { useBrand } from "../hooks/use-brand";
 
-export function CategoryForm() {
+export function BrandForm() {
     const {id} = useParams<{id: string}>();
-    const {data, isLoading} = useCategory(id ?? '')
+    const {data, isLoading} = useBrand(id ?? '')
     function handleSave() {
     }
     return (

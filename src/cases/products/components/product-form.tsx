@@ -1,14 +1,14 @@
 import { SidebarForm } from "@/components/layout/sidebar-form";
 import { useParams } from "react-router-dom";
-import { useCategory } from "../hooks/use-category";
+import { useProduct } from "../hooks/use-product";
 
-export function CategoryForm() {
+export function ProductForm() {
     const {id} = useParams<{id: string}>();
-    const {data, isLoading} = useCategory(id ?? '')
+    const {data, isLoading} = useProduct(id ?? '')
     function handleSave() {
     }
     return (
-        <SidebarForm title="Cadastro de Categoria" 
+        <SidebarForm title="Cadastro de Produto" 
         onSave={handleSave}>
             {isLoading ? (
                 <h4>Carregando...</h4>

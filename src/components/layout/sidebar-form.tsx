@@ -19,7 +19,8 @@ type SidebarFormProps = {
 
 export function SidebarForm({
     title,
-    children
+    children,
+    onSave
 }: SidebarFormProps) {
     const navigate = useNavigate();
     const location = useLocation();
@@ -47,10 +48,7 @@ export function SidebarForm({
         <SheetFooter>
             <div className="flex flex-row gap-1">
 
-                <Button
-                >
-                    Salvar
-                </Button>
+                <Button onClick={onSave}>Salvar</Button>
 
                 <SheetClose asChild>
                     <Button variant="outline">
