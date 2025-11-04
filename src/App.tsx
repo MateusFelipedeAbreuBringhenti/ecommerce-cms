@@ -6,6 +6,8 @@ import { BrandForm } from "./cases/brands/components/brand-form"
 import { ProductLayout } from "./cases/products/components/product-layout"
 import { ProductForm } from "./cases/products/components/product-form"
 
+import { ToastContainer } from "react-toastify"
+
 function App() {
 
   return (
@@ -27,6 +29,8 @@ function App() {
 
         </Routes>
       </main>
+
+      <ToastContainer />
 
     </div>
   )
