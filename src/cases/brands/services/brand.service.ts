@@ -1,7 +1,7 @@
 import { api } from "../../../lib/axios";
 import type { BrandDTO } from "../dtos/brand.dto";
 
-const _ENDPOINT = "/brands";
+const _ENDPOINT = '/brands';
 
 export const BrandService = {
 
@@ -25,7 +25,8 @@ export const BrandService = {
         return result.data;
     },
 
-    async delete(id: string): Promise<void> {
+    async delete(id: string): Promise<void>{
         await api.delete(`${_ENDPOINT}/${id}`);
     }
+
 };
